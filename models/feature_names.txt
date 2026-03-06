@@ -1,0 +1,10 @@
+chol
+thalach
+age
+oldpeak
+exang
+cp_atypical angina
+trestbps
+thal
+sex_male
+cp_non-anginal pain

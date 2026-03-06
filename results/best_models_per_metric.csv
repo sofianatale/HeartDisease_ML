@@ -1,0 +1,7 @@
+Metric,Best Model,Best Value
+accuracy,Random Forest,0.8626
+sensitivity,Random Forest,0.94
+specificity,Gaussian Naive Bayes,0.8171
+precision,Gaussian Naive Bayes,0.8544
+f1,Random Forest,0.8826
+roc_auc,Random Forest,0.9107
