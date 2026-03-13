@@ -331,10 +331,12 @@ The feature importance analysis confirms established medical knowledge:
 - Ali MM, Paul BK, Ahmed K, Bui FM, Quinn JMW, Moni MA. [Heart disease prediction using supervised machine learning algorithms: Performance analysis and comparison](https://pubmed.ncbi.nlm.nih.gov/34315030/). Comput Biol Med. 2021 Sep;136:104672. 
 
 ### Machine Learning Models
-- **Logistic Regression**: Nick TG, Campbell KM. [Logistic regression](https://pubmed.ncbi.nlm.nih.gov/18450055/). Methods Mol Biol. 2007;404:273-301. 
-- **Random Forest**: Breiman, L. (2001). Random Forests. *Machine Learning*, 45(1), 5-32.
-- **SVM**: Cortes, C., Vapnik, V. (1995). Support-vector networks. *Machine Learning*, 20(3), 273-297.
-- **Naive Bayes**: Zhang, H. (2004). The optimality of naive Bayes. *AAAI Conference*.
+- Nick TG, Campbell KM. [Logistic regression](https://pubmed.ncbi.nlm.nih.gov/18450055/). Methods Mol Biol. 2007;404:273-301. 
+- Hu J, Szymczak S. [A review on longitudinal data analysis with random forest](https://pubmed.ncbi.nlm.nih.gov/36653905/). Brief Bioinform. 2023 Mar 19;24(2):bbad002.
+- Lai Z, Chen X, Zhang J, Kong H, Wen J. [Maximal Margin Support Vector Machine for Feature Representation and Classification.](https://pubmed.ncbi.nlm.nih.gov/37018685/) IEEE Trans Cybern. 2023 Oct;53(10):6700-6713.
+- Pavan Venkata, Vivek Pandya, [Data mining model and Gaussian Naive Bayes based fault diagnostic analysis of modern power system networks](https://www.sciencedirect.com/science/article/abs/pii/S2214785322013372)
+Materials Today: Proceedings, Volume 62, Part 13, 2022, Pages 7156-7161, ISSN 2214-7853.
+
 
 ### Evaluation Metrics
 - **Matthews Correlation Coefficient**: Matthews, B.W. (1975). Comparison of the predicted and observed secondary structure of T4 phage lysozyme. *Biochimica et Biophysica Acta*.
