@@ -339,25 +339,26 @@ Materials Today: Proceedings, Volume 62, Part 13, 2022, Pages 7156-7161, ISSN 22
 
 
 ### Evaluation Metrics
-- **Matthews Correlation Coefficient**: Matthews, B.W. (1975). Comparison of the predicted and observed secondary structure of T4 phage lysozyme. *Biochimica et Biophysica Acta*.
-- **ROC Analysis**: Fawcett, T. (2006). An introduction to ROC analysis. *Pattern Recognition Letters*, 27(8), 861-874.
-- **Medical Diagnostic Metrics**: Trevethan, R. (2017). Sensitivity, specificity, and predictive values. *Journal of Clinical and Diagnostic Research*.
+- *Chicco D, Tötsch N, Jurman G. [The Matthews correlation coefficient (MCC) is more reliable than balanced accuracy, bookmaker informedness, and markedness in two-class confusion matrix evaluation](https://pubmed.ncbi.nlm.nih.gov/33541410/). BioData Min. 2021 Feb 4;14(1):13. 
+- Obuchowski NA, Bullen JA. [Receiver operating characteristic (ROC) curves: review of methods with applications in diagnostic medicine](https://pubmed.ncbi.nlm.nih.gov/29512515/). Phys Med Biol. 2018 Mar 29;63(7):07TR01.
+- Hicks SA, Strümke I, Thambawita V, Hammou M, Riegler MA, Halvorsen P, Parasa S. [On evaluation metrics for medical applications of artificial intelligence](https://pmc.ncbi.nlm.nih.gov/articles/PMC8993826/). Sci Rep. 2022 Apr 8;12(1):5979.
 
 ### Feature Selection
-- **RFECV**: Guyon, I., et al. (2002). Gene selection for cancer classification using support vector machines. *Machine Learning*, 46(1), 389-422.
-- **Feature Importance**: Breiman, L. (2001). Statistical modeling: The two cultures. *Statistical Science*, 16(3), 199-231.
+- [RFECV ](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFECV.html)
+- [Feature Importance](https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html)
 
 ### Clinical Background
-- World Health Organization. (2021). Cardiovascular diseases (CVDs). [Fact Sheet]
-- Lloyd-Jones, D.M., et al. (2006). Prediction of lifetime risk for cardiovascular disease. *Circulation*, 113(6), 791-798.
+- [World Health Organization (2025). Cardiovascular diseases (CVDs)](https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds))
+- Goldsborough E 3rd, Osuji N, Blaha MJ. [Assessment of Cardiovascular Disease Risk: A 2022 Update.](https://pubmed.ncbi.nlm.nih.gov/35963625/)Endocrinol Metab Clin North Am. 2022 Sep;51(3):483-509.
+
 
 ## Author
 
 **Sofia Natale**
 
 - **Affiliation**: AML-BASIC 2025 – University of Bologna
-- **Email**: sofia.natale@studio.unibo.it
-- **GitHub**: sofianatale
+- **Email**: [sofia.natale@studio.unibo.it](sofia.natale@studio.unibo.it)
+- **GitHub**: [sofianatale](https://github.com/sofianatale)
 
 ---
 
