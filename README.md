@@ -168,8 +168,9 @@ HeartDisease_ML/
 │   ├── processed.va.data
 │   └── heart_disease_combined.csv           # Merged and cleaned dataset
 │
-├── figures/                                     
-│   └── Coronary-heart-disease.jpg
+├── figures/
+│   ├── Coronary-heart-disease.jpg                             
+│   └── visual_pipeline.png
 │
 ├── models/                                   # Trained models and artifacts
 │   ├── logistic_regression.joblib
