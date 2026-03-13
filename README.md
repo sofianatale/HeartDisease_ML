@@ -70,7 +70,7 @@ The dataset combines patient records from four independent studies:
 | `ca` | Numerical | Number of major vessels colored | Coronary obstruction |
 | `thal` | Categorical | Thalassemia type | Perfusion status |
 
-## 🔬 Pipeline Summary
+## Pipeline Summary
 
 | Step | Description |
 |------|-------------|
@@ -81,7 +81,7 @@ The dataset combines patient records from four independent studies:
 | **5. Model Training** | Logistic Regression, Gaussian Naive Bayes, SVM, Random Forest with GridSearchCV |
 | **6. Evaluation** | Confusion matrices, ROC-AUC, sensitivity/specificity, precision, F1-score, MCC |
 
-## 🛠️ Technical Stack
+## Technical Stack
 
 - **Data Handling**: pandas, NumPy
 - **Modeling**: scikit-learn
