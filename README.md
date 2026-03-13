@@ -1,9 +1,17 @@
 # Cardiovascular Disease Prediction: A Machine Learning Approach
-
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-1.0%2B-orange)
-![pandas](https://img.shields.io/badge/pandas-1.3%2B-green)
-![License](https://img.shields.io/badge/license-MIT-lightgrey)
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-1.0%2B-orange?style=for-the-badge&logo=scikit-learn)
+![pandas](https://img.shields.io/badge/pandas-1.3%2B-150458?style=for-the-badge&logo=pandas)
+![NumPy](https://img.shields.io/badge/NumPy-1.21%2B-013243?style=for-the-badge&logo=numpy)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-3.4%2B-11557c?style=for-the-badge&logo=matplotlib)
+![Seaborn](https://img.shields.io/badge/Seaborn-0.11%2B-3776AB?style=for-the-badge&logo=python)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+![ML](https://img.shields.io/badge/Machine-Learning-ff6f00?style=for-the-badge)
+![Healthcare](https://img.shields.io/badge/Domain-Healthcare-00a1e0?style=for-the-badge)
+![ROC-AUC](https://img.shields.io/badge/ROC--AUC-0.91%2B-brightgreen?style=for-the-badge)
+![Accuracy](https://img.shields.io/badge/Accuracy-86%25-success?style=for-the-badge)
 
 ## Table of Contents
 - [Project Overview](#project-overview)
