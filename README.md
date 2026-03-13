@@ -6,12 +6,9 @@
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-3.4%2B-11557c?style=for-the-badge&logo=matplotlib)
 ![Seaborn](https://img.shields.io/badge/Seaborn-0.11%2B-3776AB?style=for-the-badge&logo=python)
 ![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter)
-![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 ![ML](https://img.shields.io/badge/Machine-Learning-ff6f00?style=for-the-badge)
 ![Healthcare](https://img.shields.io/badge/Domain-Healthcare-00a1e0?style=for-the-badge)
-![ROC-AUC](https://img.shields.io/badge/ROC--AUC-0.91%2B-brightgreen?style=for-the-badge)
-![Accuracy](https://img.shields.io/badge/Accuracy-86%25-success?style=for-the-badge)
 
 ## Table of Contents
 - [Project Overview](#project-overview)
