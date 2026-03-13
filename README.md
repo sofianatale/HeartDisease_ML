@@ -21,7 +21,6 @@
 - [Key Findings](#key-findings)
 - [Project Structure](#project-structure)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Model Comparison](#model-comparison)
 - [Clinical Implications](#clinical-implications)
 - [Future Work](#future-work)
@@ -250,43 +249,6 @@ seaborn>=0.11.0
 scikit-learn>=1.0.0
 scipy>=1.7.0
 joblib>=1.1.0
-```
-
-## Usage
-
-### Quick Start: Make Predictions
-
-```python
-# Load trained model and scaler
-import joblib
-import pandas as pd
-
-model = joblib.load('models/random_forest.joblib')
-scaler = joblib.load('models/scaler.joblib')
-
-# Prepare patient data (using top 10 features)
-patient_data = pd.DataFrame([{
-    'chol': 240.0,           # Cholesterol (mg/dL)
-    'thalach': 150.0,        # Max heart rate
-    'age': 55.0,             # Age (years)
-    'oldpeak': 1.5,          # ST depression
-    'exang': 0.0,            # Exercise angina (0 = No)
-    'cp_atypical angina': 0.0,
-    'trestbps': 130.0,        # Resting BP
-    'thal': 3.0,              # Thalassemia type
-    'sex_male': 1.0,          # 1 = Male
-    'cp_non-anginal pain': 1.0
-}])
-
-# Scale features
-scaled_data = scaler.transform(patient_data)
-
-# Predict
-prediction = model.predict(scaled_data)[0]
-probability = model.predict_proba(scaled_data)[0][1]
-
-print(f"Prediction: {'Heart Disease' if prediction == 1 else 'Healthy'}")
-print(f"Probability of disease: {probability:.2%}")
 ```
 
 ### Run Full Pipeline
