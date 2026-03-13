@@ -78,14 +78,7 @@ The dataset combines patient records from four independent studies:
 
 ## Pipeline Summary
 
-| Step | Description |
-|------|-------------|
-| **1. Data Preprocessing** | Missing value imputation (median), categorical encoding, outlier removal (Z-score > 3) |
-| **2. Exploratory Analysis** | Target distribution, demographic patterns, categorical feature impact, numerical feature distributions |
-| **3. Data Preparation** | Train-test split (80/20 stratified), Min-Max scaling |
-| **4. Feature Engineering** | RFECV with Logistic Regression, Random Forest feature importance, selection of top 10 predictors |
-| **5. Model Training** | Logistic Regression, Gaussian Naive Bayes, SVM, Random Forest with GridSearchCV |
-| **6. Evaluation** | Confusion matrices, ROC-AUC, sensitivity/specificity, precision, F1-score, MCC |
+![Visual_pipeline](https://github.com/sofianatale/HeartDisease_ML/blob/main/figures/%20visual_pipeline.png)
 
 ## Technical Stack
 
