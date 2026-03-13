@@ -30,7 +30,7 @@
 
 ## Project Overview
 
-Cardiovascular diseases represent the leading cause of death worldwide, accounting for approximately **17.8 million deaths annually** according to the World Health Organization (WHO). Early identification of individuals at risk is essential for implementing preventive strategies and improving long-term patient outcomes.
+Cardiovascular diseases represent the leading cause of death worldwide, accounting for approximately **19.8 million deaths annually** according to the World Health Organization (WHO). Early identification of individuals at risk is essential for implementing preventive strategies and improving long-term patient outcomes.
 
 This project develops a **complete machine learning pipeline** for predicting the presence of cardiovascular disease using clinical patient data. It demonstrates:
 
