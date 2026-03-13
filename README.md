@@ -186,14 +186,6 @@ HeartDisease_ML/
 │   ├── scaler.joblib                         # Fitted MinMaxScaler
 │   └── feature_names.txt                     # Selected features
 │
-├── splits/                                    # Train-test splits
-│   ├── X_train.csv
-│   ├── X_test.csv
-│   ├── y_train.csv
-│   ├── y_test.csv
-│   ├── X_train_scaled.csv
-│   └── X_test_scaled.csv
-│
 ├── plots/                                   # All visualizations from the notebook
 │   ├── EDA/                             
 │   │   ├── target_distribution.png
@@ -216,6 +208,14 @@ HeartDisease_ML/
 ├── results/                                   # Evaluation outputs (tables only)
 │   ├── model_comparison.csv                   # Metrics comparison table
 │   └── best_models_per_metric.csv             # Best model for each metric
+│
+├── splits/                                    # Train-test splits
+│   ├── X_train.csv
+│   ├── X_test.csv
+│   ├── y_train.csv
+│   ├── y_test.csv
+│   ├── X_train_scaled.csv
+│   └── X_test_scaled.csv
 │
 ├── .gitignore                                   # Git ignore file
 └── README.md                                    # This file
