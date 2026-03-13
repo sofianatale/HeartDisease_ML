@@ -320,11 +320,11 @@ The feature importance analysis confirms established medical knowledge:
 
 ## References
 
-### Dataset & Problem Domain
+#### *Dataset & Problem Domain*
 - [UCI Heart Disease Dataset](https://archive.ics.uci.edu/dataset/45/heart+disease)
 - Ali MM, Paul BK, Ahmed K, Bui FM, Quinn JMW, Moni MA. [Heart disease prediction using supervised machine learning algorithms: Performance analysis and comparison](https://pubmed.ncbi.nlm.nih.gov/34315030/). Comput Biol Med. 2021 Sep;136:104672. 
 
-### Machine Learning Models
+#### *Machine Learning Models*
 - Nick TG, Campbell KM. [Logistic regression](https://pubmed.ncbi.nlm.nih.gov/18450055/). Methods Mol Biol. 2007;404:273-301. 
 - Hu J, Szymczak S. [A review on longitudinal data analysis with random forest](https://pubmed.ncbi.nlm.nih.gov/36653905/). Brief Bioinform. 2023 Mar 19;24(2):bbad002.
 - Lai Z, Chen X, Zhang J, Kong H, Wen J. [Maximal Margin Support Vector Machine for Feature Representation and Classification.](https://pubmed.ncbi.nlm.nih.gov/37018685/) IEEE Trans Cybern. 2023 Oct;53(10):6700-6713.
@@ -332,16 +332,16 @@ The feature importance analysis confirms established medical knowledge:
 Materials Today: Proceedings, Volume 62, Part 13, 2022, Pages 7156-7161, ISSN 2214-7853.
 
 
-### Evaluation Metrics
+#### *Evaluation Metrics*
 - *Chicco D, Tötsch N, Jurman G. [The Matthews correlation coefficient (MCC) is more reliable than balanced accuracy, bookmaker informedness, and markedness in two-class confusion matrix evaluation](https://pubmed.ncbi.nlm.nih.gov/33541410/). BioData Min. 2021 Feb 4;14(1):13. 
 - Obuchowski NA, Bullen JA. [Receiver operating characteristic (ROC) curves: review of methods with applications in diagnostic medicine](https://pubmed.ncbi.nlm.nih.gov/29512515/). Phys Med Biol. 2018 Mar 29;63(7):07TR01.
 - Hicks SA, Strümke I, Thambawita V, Hammou M, Riegler MA, Halvorsen P, Parasa S. [On evaluation metrics for medical applications of artificial intelligence](https://pmc.ncbi.nlm.nih.gov/articles/PMC8993826/). Sci Rep. 2022 Apr 8;12(1):5979.
 
-### Feature Selection
+#### *Feature Selection*
 - [RFECV ](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFECV.html)
 - [Feature Importance](https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html)
 
-### Clinical Background
+#### *Clinical Background*
 - [World Health Organization (2025). Cardiovascular diseases (CVDs)](https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds))
 - Goldsborough E 3rd, Osuji N, Blaha MJ. [Assessment of Cardiovascular Disease Risk: A 2022 Update.](https://pubmed.ncbi.nlm.nih.gov/35963625/)Endocrinol Metab Clin North Am. 2022 Sep;51(3):483-509.
 
