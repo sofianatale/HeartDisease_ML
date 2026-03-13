@@ -27,6 +27,8 @@
 - [References](#references)
 - [Author](#author)
 
+[heart](https://github.com/sofianatale/HeartDisease_ML/blob/main/figures/heart.jpeg)
+
 ## Project Overview
 
 Cardiovascular diseases represent the leading cause of death worldwide, accounting for approximately **17.8 million deaths annually** according to the World Health Organization (WHO). Early identification of individuals at risk is essential for implementing preventive strategies and improving long-term patient outcomes.
