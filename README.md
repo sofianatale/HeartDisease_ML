@@ -27,7 +27,7 @@
 - [References](#references)
 - [Author](#author)
 
-[heart](https://github.com/sofianatale/HeartDisease_ML/blob/main/figures/heart.jpeg)
+![heart](https://github.com/sofianatale/HeartDisease_ML/blob/main/figures/heart.jpeg)
 
 ## Project Overview
 
