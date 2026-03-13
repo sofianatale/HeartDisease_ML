@@ -194,10 +194,6 @@ HeartDisease_ML/
 │   ├── X_train_scaled.csv
 │   └── X_test_scaled.csv
 │
-├── results/                                   # Evaluation outputs (tables only)
-│   ├── model_comparison.csv                   # Metrics comparison table
-│   └── best_models_per_metric.csv             # Best model for each metric
-│
 ├── plots/                                   # All visualizations from the notebook
 │   ├── EDA/                             
 │   │   ├── target_distribution.png
@@ -216,6 +212,10 @@ HeartDisease_ML/
 ├── project/
 │   ├── Cardiovascular_Disease_Prediction_Report.pdf
 │   └── heart_disease.ipynb                     # Complete analysis pipeline
+│ 
+├── results/                                   # Evaluation outputs (tables only)
+│   ├── model_comparison.csv                   # Metrics comparison table
+│   └── best_models_per_metric.csv             # Best model for each metric
 │
 ├── .gitignore                                   # Git ignore file
 └── README.md                                    # This file
