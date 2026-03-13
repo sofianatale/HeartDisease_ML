@@ -240,7 +240,7 @@ python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-### Requirements
+3. **Requirements**
 ```
 pandas>=1.3.0
 numpy>=1.21.0
@@ -251,7 +251,7 @@ scipy>=1.7.0
 joblib>=1.1.0
 ```
 
-### Run Full Pipeline
+4. **Run Full Pipeline**
 
 To reproduce the entire analysis:
 
