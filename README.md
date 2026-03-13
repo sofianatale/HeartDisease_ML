@@ -175,6 +175,9 @@ HeartDisease_ML/
 │   ├── processed.va.data
 │   └── heart_disease_combined.csv           # Merged and cleaned dataset
 │
+├── figures/                                     
+│   └── Coronary-heart-disease.jpg
+│
 ├── models/                                   # Trained models and artifacts
 │   ├── logistic_regression.joblib
 │   ├── naive_bayes.joblib
@@ -204,17 +207,15 @@ HeartDisease_ML/
 │   │   ├── heatmap_slope.png
 │   │   └── boxplot.png
 │   ├── evaluation/             # Feature selection visualizations
-│   │   └── gnb.png
+│   │   ├── gnb.png
 │   │   ├── lr.png
 │   │   ├── rf.png
 │   │   └── svm.png
 │   └── feature_importance.png                      # Model evaluation visualizations      
 │
-├── notebooks/
+├── project/
+│   ├── Cardiovascular_Disease_Prediction_Report.pdf
 │   └── heart_disease.ipynb                     # Complete analysis pipeline
-│
-├── report/                                      # Final report
-│   └── Cardiovascular_Disease_Prediction_Report.pdf
 │
 ├── .gitignore                                   # Git ignore file
 └── README.md                                    # This file
