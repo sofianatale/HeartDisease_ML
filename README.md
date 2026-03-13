@@ -21,7 +21,6 @@
 - [Future Work](#future-work)
 - [References](#references)
 - [Author](#author)
-- [License](#license)
 
 ## Project Overview
 
