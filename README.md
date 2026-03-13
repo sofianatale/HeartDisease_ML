@@ -328,7 +328,7 @@ The feature importance analysis confirms established medical knowledge:
 
 ### Dataset & Problem Domain
 - [UCI Heart Disease Dataset](https://archive.ics.uci.edu/dataset/45/heart+disease)
-- Detrano, R., et al. (1989). International application of a new probability algorithm for the diagnosis of coronary artery disease. *American Journal of Cardiology*.
+- Ali MM, Paul BK, Ahmed K, Bui FM, Quinn JMW, Moni MA. Heart disease prediction using supervised machine learning algorithms: Performance analysis and comparison. Comput Biol Med. 2021 Sep;136:104672. doi: 10.1016/j.compbiomed.2021.104672. Epub 2021 Jul 21. PMID: 34315030. [HDP](https://pubmed.ncbi.nlm.nih.gov/34315030/)
 
 ### Machine Learning Models
 - **Logistic Regression**: Hosmer, D.W., Lemeshow, S., Sturdivant, R.X. (2013). *Applied Logistic Regression*.
