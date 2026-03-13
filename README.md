@@ -331,7 +331,7 @@ The feature importance analysis confirms established medical knowledge:
 - Ali MM, Paul BK, Ahmed K, Bui FM, Quinn JMW, Moni MA. [Heart disease prediction using supervised machine learning algorithms: Performance analysis and comparison](https://pubmed.ncbi.nlm.nih.gov/34315030/). Comput Biol Med. 2021 Sep;136:104672. 
 
 ### Machine Learning Models
-- **Logistic Regression**: Hosmer, D.W., Lemeshow, S., Sturdivant, R.X. (2013). *Applied Logistic Regression*.
+- **Logistic Regression**: Nick TG, Campbell KM. [Logistic regression](https://pubmed.ncbi.nlm.nih.gov/18450055/). Methods Mol Biol. 2007;404:273-301. 
 - **Random Forest**: Breiman, L. (2001). Random Forests. *Machine Learning*, 45(1), 5-32.
 - **SVM**: Cortes, C., Vapnik, V. (1995). Support-vector networks. *Machine Learning*, 20(3), 273-297.
 - **Naive Bayes**: Zhang, H. (2004). The optimality of naive Bayes. *AAAI Conference*.
