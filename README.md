@@ -188,12 +188,12 @@ HeartDisease_ML/
 │   │   ├── heatmap_ecg.png
 │   │   ├── heatmap_slope.png
 │   │   └── boxplot.png
-│   ├── evaluation/             # Feature selection visualizations
+│   ├── evaluation/               # Model evaluation visualizations  
 │   │   ├── gnb.png
 │   │   ├── lr.png
 │   │   ├── rf.png
 │   │   └── svm.png
-│   └── feature_importance.png                      # Model evaluation visualizations      
+│   └── feature_importance.png                      # Feature selection visualizations   
 │
 ├── project/
 │   ├── HeartDisease_Prediction_Report.pdf
