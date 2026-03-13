@@ -202,7 +202,7 @@ HeartDisease_ML/
 │   └── feature_importance.png                      # Model evaluation visualizations      
 │
 ├── project/
-│   ├── Cardiovascular_Disease_Prediction_Report.pdf
+│   ├── Heart_Disease_Prediction_Natale_Sofia.pdf
 │   └── heart_disease.ipynb                     # Complete analysis pipeline
 │ 
 ├── results/                                   # Evaluation outputs (tables only)
