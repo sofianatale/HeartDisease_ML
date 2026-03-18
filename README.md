@@ -113,12 +113,10 @@ Given the medical context, special attention was paid to metrics that matter in 
 
 | Metric | Formula | Clinical Relevance |
 |--------|---------|---------------------|
-| **Sensitivity (Recall)** | TP / (TP + FN) | Ability to detect diseased patients (minimize false negatives) |
-| **Specificity** | TN / (TN + FP) | Ability to correctly identify healthy patients |
-| **Precision** | TP / (TP + FP) | Confidence when predicting disease |
-| **F1-Score** | 2 × (Precision × Recall) / (Precision + Recall) | Harmonic mean of precision and recall |
-| **MCC** | Matthews Correlation Coefficient | Balanced measure robust to imbalance |
-| **ROC-AUC** | Area Under ROC Curve | Overall discriminative ability |
+| **Accuracy** | (TP + TN) / (TP + TN + FP + FN) | Overall correctness of predictions |
+| **Recall (Sensitivity)** | TP / (TP + FN) | Ability to detect diseased patients (minimize false negatives) |
+| **Macro F1-Score** | Average of class-wise F1 scores: (F1_class0 + F1_class1) / 2 | Harmonic mean of precision and recall, averaged equally across both classes |
+| **MCC** | (TP × TN - FP × FN) / √[(TP+FP)(TP+FN)(TN+FP)(TN+FN)] | Balanced measure robust to class imbalance, ranging from -1 to +1 |
 
 ### Key Evaluation Techniques
 
