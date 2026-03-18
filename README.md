@@ -34,11 +34,11 @@ Cardiovascular diseases represent the leading cause of death worldwide, accounti
 
 This project develops a **complete machine learning pipeline** for predicting the presence of cardiovascular disease using clinical patient data. It demonstrates:
 
-- **Robust data preprocessing** with missing value imputation and outlier detection
+- **Data preprocessing** with missing value imputation and outlier detection
 - **Comprehensive exploratory analysis** of clinical features and their relationships
 - **Feature engineering** including normalization and selection (RFECV + Random Forest importance)
 - **Comparative evaluation** of four classification algorithms
-- **Fair performance assessment** using metrics suited for imbalanced medical data
+- **Performance assessment** using metrics suited for imbalanced medical data
 - **Fully reproducible workflow** with saved models and preprocessing artifacts
 
 The pipeline provides a clear example of designing and evaluating classifiers for medical diagnostic support, with particular attention to the **sensitivity-specificity trade-off** critical in healthcare applications.
