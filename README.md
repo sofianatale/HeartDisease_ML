@@ -79,7 +79,7 @@ The dataset combines patient records from four independent studies:
 
 ## Pipeline Summary
 
-![Visual_pipeline](https://github.com/sofianatale/HeartDisease_ML/blob/main/figures/visual_pipeline.png)
+![Visual_pipeline](https://github.com/sofianatale/HeartDisease_ML/blob/main/images/figures/visual_pipeline.png)
 
 ## Technical Stack
 
