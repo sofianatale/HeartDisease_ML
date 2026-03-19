@@ -1,0 +1,5 @@
+,Accuracy,Recall,Macro F1,MCC,ROC-AUC
+Logistic Regression,0.8516,0.89,0.8492,0.6998,0.9106
+Gaussian Naive Bayes,0.8516,0.88,0.8496,0.6998,0.9104
+SVM,0.8462,0.91,0.8424,0.6902,0.913
+Random Forest,0.8516,0.93,0.8472,0.7036,0.9094
