@@ -21,6 +21,7 @@
 - [Key Findings](#key-findings)
 - [Project Structure](#project-structure)
 - [Installation](#installation)
+- [Results](#results)
 - [Model Comparison](#model-comparison)
 - [Clinical Implications](#clinical-implications)
 - [Future Work](#future-work)
@@ -34,11 +35,11 @@ Cardiovascular diseases represent the leading cause of death worldwide, accounti
 
 This project develops a **complete machine learning pipeline** for predicting the presence of cardiovascular disease using clinical patient data. It demonstrates:
 
-- **Data preprocessing** with missing value imputation and outlier detection
+- **Data preprocessing** with missing value imputation, outlier detection (Z-score method), and encoding of categorical variables
 - **Comprehensive exploratory analysis** of clinical features and their relationships
-- **Feature engineering** including normalization and selection (RFECV + Random Forest importance)
-- **Comparative evaluation** of four classification algorithms
-- **Performance assessment** using metrics suited for imbalanced medical data
+- **Feature engineering** including MinMax scaling and Random Forest-based feature selection
+- **Comparative evaluation** of four classification algorithms (Logistic Regression, Gaussian Naive Bayes, SVM, Random Forest)
+- **Performance assessment** using metrics suited for medical applications
 - **Fully reproducible workflow** with saved models and preprocessing artifacts
 
 The pipeline provides a clear example of designing and evaluating classifiers for medical diagnostic support, with particular attention to the **sensitivity-specificity trade-off** critical in healthcare applications.
@@ -56,7 +57,7 @@ The dataset combines patient records from four independent studies:
 **Dataset Characteristics**:
 - **Total Samples**: 920 patient records (908 after outlier removal)
 - **Features**: 13 clinical and diagnostic attributes
-- **Target Classes**: 0 (absence) to 4 (presence with varying severity levels) → **Binary classification**
+- **Target Classes**: 0 (absence) to 4 (presence with varying severity levels) → **Binary classification** (0 = Healthy, 1-4 = Heart Disease)
 
 ### Feature Description
 
@@ -82,9 +83,9 @@ The dataset combines patient records from four independent studies:
 
 ## Technical Stack
 
-- **Data Handling**: pandas, NumPy
+- **Data Handling**: pandas, NumPy, SciPy
 - **Modeling**: scikit-learn
-- **Feature Selection**: RFECV, SelectKBest, Random Forest importance
+- **Feature Selection**: Random Forest Feature Importance
 - **Evaluation & Metrics**: scikit-learn, Matplotlib, Seaborn
 - **Visualization**: matplotlib, seaborn
 - **Reproducibility & Export**: joblib, pickle
@@ -93,11 +94,11 @@ The dataset combines patient records from four independent studies:
 
 ### Models Implemented
 
-| Model | Description | Key Hyperparameters |
-|-------|-------------|---------------------|
-| **Logistic Regression** | Linear classifier with probability outputs | C=10 (optimal), L2 penalty |
+| Model | Description | Optimal Hyperparameters |
+|-------|-------------|------------------------|
+| **Logistic Regression** | Linear classifier with probability outputs | C=10, penalty='l2', solver='liblinear' |
 | **Gaussian Naive Bayes** | Probabilistic classifier assuming feature independence | var_smoothing=1e-9 |
-| **SVM (RBF kernel)** | Margin-based classifier with non-linear boundary | C=4, gamma='scale' |
+| **SVM (RBF kernel)** | Margin-based classifier with non-linear boundary | C=4, kernel='rbf', gamma='scale' |
 | **Random Forest** | Ensemble of decision trees | max_depth=5, n_estimators=100, min_samples_split=2 |
 
 ### Why These Models?
@@ -105,7 +106,7 @@ The dataset combines patient records from four independent studies:
 - **Logistic Regression**: Interpretable baseline, provides probability estimates
 - **Gaussian Naive Bayes**: Fast, works well with continuous features, handles uncertainty
 - **SVM**: Effective in high-dimensional spaces, flexible decision boundaries
-- **Random Forest**: Robust to outliers, captures non-linear relationships, feature importance
+- **Random Forest**: Robust to outliers, captures non-linear relationships, provides feature importance
 
 ## Evaluation & Metrics
 
@@ -114,15 +115,16 @@ Given the medical context, special attention was paid to metrics that matter in 
 | Metric | Formula | Clinical Relevance |
 |--------|---------|---------------------|
 | **Accuracy** | (TP + TN) / (TP + TN + FP + FN) | Overall correctness of predictions |
-| **Recall (Sensitivity)** | TP / (TP + FN) | Ability to detect diseased patients (minimize false negatives) |
+| **Recall (Sensitivity)** | TP / (TP + FN) | **Critical**: Ability to detect diseased patients (minimize false negatives) |
 | **Macro F1-Score** | Average of class-wise F1 scores: (F1_class0 + F1_class1) / 2 | Harmonic mean of precision and recall, averaged equally across both classes |
-| **MCC** | (TP × TN - FP × FN) / √[(TP+FP)(TP+FN)(TN+FP)(TN+FN)] | Balanced measure robust to class imbalance, ranging from -1 to +1 |
+| **MCC (Matthews Correlation Coefficient)** | (TP × TN - FP × FN) / √[(TP+FP)(TP+FN)(TN+FP)(TN+FN)] | Balanced measure robust to class imbalance, ranging from -1 to +1 |
+| **ROC-AUC** | Area Under ROC Curve | Threshold-independent measure of discriminative ability |
 
 ### Key Evaluation Techniques
 
 - **Confusion Matrices**: Visual assessment of prediction patterns
 - **ROC Curves**: Threshold-independent performance visualization
-- **Cross-validation**: 5-fold stratified CV for hyperparameter tuning
+- **Cross-validation**: 5-fold stratified CV for hyperparameter tuning with `scoring='roc_auc'`
 - **Macro-averaged metrics**: Equal weight to both classes
 
 ## Key Findings
@@ -167,7 +169,7 @@ HeartDisease_ML/
 │   └── heart_disease_combined.csv           # Merged and cleaned dataset
 │
 ├── figures/
-│   ├── Coronary-heart-disease.jpg                             
+│   ├── Coronary-heart-disease.jpg
 │   └── visual_pipeline.png
 │
 ├── models/                                   # Trained models and artifacts
@@ -179,25 +181,25 @@ HeartDisease_ML/
 │   └── feature_names.txt                     # Selected features
 │
 ├── plots/                                   # All visualizations from the notebook
-│   ├── EDA/                             
+│   ├── EDA/
 │   │   ├── target_distribution.png
 │   │   ├── demographic_analysis.png
 │   │   ├── heatmap_cp.png
 │   │   ├── heatmap_ecg.png
 │   │   ├── heatmap_slope.png
 │   │   └── boxplot.png
-│   ├── evaluation/               # Model evaluation visualizations  
-│   │   ├── gnb.png
-│   │   ├── lr.png
-│   │   ├── rf.png
-│   │   └── svm.png
-│   └── feature_importance.png                      # Feature selection visualizations   
+│   ├── evaluation/
+│   │   ├── gnb_evaluation.png
+│   │   ├── lr_evaluation.png
+│   │   ├── rf_evaluation.png
+│   │   └── svm_evaluation.png
+│   └── feature_importance.png
 │
 ├── project/
 │   ├── HeartDisease_Prediction_Report.pdf
 │   └── heart_disease.ipynb                     # Complete analysis pipeline
-│ 
-├── results/                                   # Evaluation outputs (tables only)
+│
+├── results/                                   # Evaluation outputs
 │   ├── model_comparison.csv                   # Metrics comparison table
 │   └── best_models_per_metric.csv             # Best model for each metric
 │
@@ -209,8 +211,8 @@ HeartDisease_ML/
 │   ├── X_train_scaled.csv
 │   └── X_test_scaled.csv
 │
-├── .gitignore                                   # Git ignore file
-└── README.md                                    # This file
+├── .gitignore
+└── README.md
 ```
 
 ## Installation
@@ -233,60 +235,46 @@ python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-3. **Requirements**
-```
-pandas>=1.3.0
-numpy>=1.21.0
-matplotlib>=3.4.0
-seaborn>=0.11.0
-scikit-learn>=1.0.0
-scipy>=1.7.0
-joblib>=1.1.0
-```
-
-4. **Run Full Pipeline**
-
-To reproduce the entire analysis:
-
+3. **Install dependencies**
 ```bash
-jupyter notebook notebooks/heart_disease.ipynb
+pip install pandas numpy matplotlib seaborn scikit-learn scipy joblib
 ```
 
-Or execute as Python script:
+4. **Run the Jupyter Notebook**
 ```bash
-python -c "import notebook; notebook.run_notebook('notebooks/heart_disease.ipynb')"
+jupyter notebook project/heart_disease.ipynb
 ```
 
-## Model Comparison
+## Results
 
-### Final Test Set Performance
+### Final Test Set Performance (5 Key Metrics)
 
-| Model | Accuracy | Sensitivity | Specificity | Precision | F1-Score | ROC-AUC | MCC |
-|-------|----------|-------------|-------------|-----------|----------|---------|-----|
-| **Random Forest** | **0.8626** | **0.94** | 0.7683 | 0.8319 | **0.8826** | **0.9107** | **0.7264** |
-| Logistic Regression | 0.8516 | 0.89 | 0.8049 | 0.8476 | 0.8683 | 0.9106 | 0.6998 |
-| Gaussian Naive Bayes | 0.8516 | 0.88 | **0.8171** | **0.8544** | 0.8670 | 0.9104 | 0.6998 |
-| SVM | 0.8352 | 0.92 | 0.7317 | 0.8070 | 0.8598 | 0.8874 | 0.6703 |
+| Model | Accuracy | Recall | Macro F1 | MCC | ROC-AUC |
+|-------|----------|---------|----------|-----|---------|
+| **Random Forest** | **0.8626** | **0.94** | **0.8826** | **0.7264** | **0.9107** |
+| Logistic Regression | 0.8516 | 0.89 | 0.8683 | 0.6998 | 0.9106 |
+| Gaussian Naive Bayes | 0.8516 | 0.88 | 0.8670 | 0.6998 | 0.9104 |
+| SVM | 0.8352 | 0.92 | 0.8598 | 0.6703 | 0.8874 |
 
 ### Best Model by Metric
 
 | Metric | Best Model | Value |
 |--------|------------|-------|
 | **Accuracy** | Random Forest | 0.8626 |
-| **Sensitivity** | Random Forest | 0.9400 |
-| **Specificity** | Gaussian Naive Bayes | 0.8171 |
-| **Precision** | Gaussian Naive Bayes | 0.8544 |
-| **F1-Score** | Random Forest | 0.8826 |
-| **ROC-AUC** | Random Forest | 0.9107 |
+| **Recall (Sensitivity)** | Random Forest | 0.9400 |
+| **Macro F1** | Random Forest | 0.8826 |
 | **MCC** | Random Forest | 0.7264 |
+| **ROC-AUC** | Random Forest | 0.9107 |
+
+## Model Comparison
 
 ### Key Observations
 
-- **Random Forest** achieves the best overall performance with highest accuracy, sensitivity, and F1-score
-- All models show strong discriminative ability with ROC-AUC > 0.88
-- **Sensitivity-Specificity Trade-off**: SVM prioritizes sensitivity (0.92) at the cost of specificity
-- Simpler models (Logistic Regression, Naive Bayes) perform remarkably well
-- **Clinical perspective**: Random Forest minimizes false negatives (missed diagnoses) while maintaining good precision
+- **Random Forest** achieves the **best overall performance** across all 5 key metrics, with the highest MCC (0.7264) indicating superior classification quality
+- **All models show strong discriminative ability** with ROC-AUC > 0.88
+- **Sensitivity-Specificity Trade-off**: SVM prioritizes sensitivity (0.92) at the cost of specificity, resulting in lower MCC
+- **Simpler models remain competitive**: Logistic Regression and Naive Bayes achieve ROC-AUC scores comparable to Random Forest
+- **Clinical perspective**: Random Forest minimizes false negatives (missed diagnoses) while maintaining excellent precision
 
 ## Clinical Implications
 
@@ -294,7 +282,7 @@ python -c "import notebook; notebook.run_notebook('notebooks/heart_disease.ipynb
 
 For medical screening applications, **sensitivity (recall)** is often prioritized over specificity, as missing a disease diagnosis has more severe consequences than false alarms. Based on this criterion:
 
-1. **Random Forest** (sensitivity = 0.94) → Best choice for screening
+1. **Random Forest** (sensitivity = 0.94, MCC = 0.7264) → **Best choice for screening**
 2. **SVM** (sensitivity = 0.92) → Acceptable alternative with higher false positive rate
 3. **Logistic Regression** (sensitivity = 0.89) → Balanced option
 4. **Naive Bayes** (sensitivity = 0.88) → Good specificity but lower sensitivity
@@ -302,10 +290,10 @@ For medical screening applications, **sensitivity (recall)** is often prioritize
 ### Risk Factor Confirmation
 
 The feature importance analysis confirms established medical knowledge:
-- Cholesterol is the dominant predictor
-- Exercise capacity (thalach) strongly indicates cardiac function
-- Age remains a fundamental risk factor
-- ST depression validates as key diagnostic indicator
+- **Cholesterol** is the dominant predictor
+- **Exercise capacity** (thalach) strongly indicates cardiac function
+- **Age** remains a fundamental risk factor
+- **ST depression** validates as key diagnostic indicator
 
 ## Future Work
 
@@ -327,30 +315,26 @@ The feature importance analysis confirms established medical knowledge:
 - Nick TG, Campbell KM. [Logistic regression](https://pubmed.ncbi.nlm.nih.gov/18450055/). Methods Mol Biol. 2007;404:273-301. 
 - Hu J, Szymczak S. [A review on longitudinal data analysis with random forest](https://pubmed.ncbi.nlm.nih.gov/36653905/). Brief Bioinform. 2023 Mar 19;24(2):bbad002.
 - Lai Z, Chen X, Zhang J, Kong H, Wen J. [Maximal Margin Support Vector Machine for Feature Representation and Classification.](https://pubmed.ncbi.nlm.nih.gov/37018685/) IEEE Trans Cybern. 2023 Oct;53(10):6700-6713.
-- Pavan Venkata, Vivek Pandya, [Data mining model and Gaussian Naive Bayes based fault diagnostic analysis of modern power system networks](https://www.sciencedirect.com/science/article/abs/pii/S2214785322013372)
-Materials Today: Proceedings, Volume 62, Part 13, 2022, Pages 7156-7161, ISSN 2214-7853.
-
+- Pavan Venkata, Vivek Pandya, [Data mining model and Gaussian Naive Bayes based fault diagnostic analysis of modern power system networks](https://www.sciencedirect.com/science/article/abs/pii/S2214785322013372). Materials Today: Proceedings, Volume 62, Part 13, 2022, Pages 7156-7161.
 
 #### *Evaluation Metrics*
-- *Chicco D, Tötsch N, Jurman G. [The Matthews correlation coefficient (MCC) is more reliable than balanced accuracy, bookmaker informedness, and markedness in two-class confusion matrix evaluation](https://pubmed.ncbi.nlm.nih.gov/33541410/). BioData Min. 2021 Feb 4;14(1):13. 
+- Chicco D, Tötsch N, Jurman G. [The Matthews correlation coefficient (MCC) is more reliable than balanced accuracy, bookmaker informedness, and markedness in two-class confusion matrix evaluation](https://pubmed.ncbi.nlm.nih.gov/33541410/). BioData Min. 2021 Feb 4;14(1):13. 
 - Obuchowski NA, Bullen JA. [Receiver operating characteristic (ROC) curves: review of methods with applications in diagnostic medicine](https://pubmed.ncbi.nlm.nih.gov/29512515/). Phys Med Biol. 2018 Mar 29;63(7):07TR01.
 - Hicks SA, Strümke I, Thambawita V, Hammou M, Riegler MA, Halvorsen P, Parasa S. [On evaluation metrics for medical applications of artificial intelligence](https://pmc.ncbi.nlm.nih.gov/articles/PMC8993826/). Sci Rep. 2022 Apr 8;12(1):5979.
 
 #### *Feature Selection*
-- [RFECV ](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFECV.html)
 - [Feature Importance](https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html)
 
 #### *Clinical Background*
 - [World Health Organization (2025). Cardiovascular diseases (CVDs)](https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds))
-- Goldsborough E 3rd, Osuji N, Blaha MJ. [Assessment of Cardiovascular Disease Risk: A 2022 Update.](https://pubmed.ncbi.nlm.nih.gov/35963625/)Endocrinol Metab Clin North Am. 2022 Sep;51(3):483-509.
-
+- Goldsborough E 3rd, Osuji N, Blaha MJ. [Assessment of Cardiovascular Disease Risk: A 2022 Update.](https://pubmed.ncbi.nlm.nih.gov/35963625/) Endocrinol Metab Clin North Am. 2022 Sep;51(3):483-509.
 
 ## Author
 
 **Sofia Natale**
 
 - **Affiliation**: AML-BASIC 2025 – University of Bologna
-- **Email**: [sofia.natale@studio.unibo.it](sofia.natale@studio.unibo.it)
+- **Email**: [sofia.natale@studio.unibo.it](mailto:sofia.natale@studio.unibo.it)
 - **GitHub**: [sofianatale](https://github.com/sofianatale)
 
 ---
