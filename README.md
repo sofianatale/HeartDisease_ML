@@ -359,5 +359,3 @@ The feature importance analysis confirms established medical knowledge:
 ---
 
 *For questions, collaborations, or feedback, please open an issue on GitHub or contact the author directly.*
-
-*For questions, collaborations, or feedback, please open an issue on GitHub or contact the author directly.*
