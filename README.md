@@ -251,30 +251,41 @@ jupyter notebook project/heart_disease.ipynb
 
 | Model | Accuracy | Recall | Macro F1 | MCC | ROC-AUC |
 |-------|----------|---------|----------|-----|---------|
-| **Random Forest** | **0.8626** | **0.94** | **0.8826** | **0.7264** | **0.9107** |
-| Logistic Regression | 0.8516 | 0.89 | 0.8683 | 0.6998 | 0.9106 |
-| Gaussian Naive Bayes | 0.8516 | 0.88 | 0.8670 | 0.6998 | 0.9104 |
-| SVM | 0.8352 | 0.92 | 0.8598 | 0.6703 | 0.8874 |
+| Random Forest | 0.8516 | **0.93** | 0.8472 | **0.7036** | 0.9094 |
+| Logistic Regression | 0.8516 | 0.89 | 0.8492 | 0.6998 | 0.9106 |
+| Gaussian Naive Bayes | 0.8516 | 0.88 | **0.8496** | 0.6998 | 0.9104 |
+| SVM | 0.8462 | 0.91 | 0.8424 | 0.6902 | **0.9130** |
 
 ### Best Model by Metric
 
 | Metric | Best Model | Value |
 |--------|------------|-------|
-| **Accuracy** | Random Forest | 0.8626 |
-| **Recall (Sensitivity)** | Random Forest | 0.9400 |
-| **Macro F1** | Random Forest | 0.8826 |
-| **MCC** | Random Forest | 0.7264 |
-| **ROC-AUC** | Random Forest | 0.9107 |
+| **Accuracy** | Logistic Regression / Random Forest / GNB | 0.8516 |
+| **Recall (Sensitivity)** | Random Forest | 0.9300 |
+| **Macro F1** | Gaussian Naive Bayes | 0.8496 |
+| **MCC** | Random Forest | 0.7036 |
+| **ROC-AUC** | SVM | 0.9130 |
 
 ## Model Comparison
 
 ### Key Observations
 
-- **Random Forest** achieves the **best overall performance** across all 5 key metrics, with the highest MCC (0.7264) indicating superior classification quality
-- **All models show strong discriminative ability** with ROC-AUC > 0.88
-- **Sensitivity-Specificity Trade-off**: SVM prioritizes sensitivity (0.92) at the cost of specificity, resulting in lower MCC
-- **Simpler models remain competitive**: Logistic Regression and Naive Bayes achieve ROC-AUC scores comparable to Random Forest
-- **Clinical perspective**: Random Forest minimizes false negatives (missed diagnoses) while maintaining excellent precision
+- **Random Forest** demonstrates the **best balance for clinical applications**, achieving the highest Recall (0.93) and MCC (0.7036), making it the most suitable model for minimizing false negatives
+- **SVM** shows the highest discriminative ability (ROC-AUC = 0.9130) and strong recall (0.91), but at the cost of lower MCC due to more false positives
+- **Gaussian Naive Bayes** achieves the best Macro F1 (0.8496), indicating excellent balance between precision and recall across both classes
+- **Logistic Regression** provides consistent performance across all metrics, making it a reliable baseline
+- **All models demonstrate strong predictive capability** with ROC-AUC scores exceeding 0.90 for three out of four models
+
+### Sensitivity-Specificity Trade-off
+
+The results highlight the classic trade-off in medical diagnostics:
+
+| Model | Recall (Sensitivity) | Specificity (from confusion matrices) | Clinical Trade-off |
+|-------|---------------------|--------------------------------------|-------------------|
+| Random Forest | 0.93 | 0.7683 | Best for screening (minimizes missed diagnoses) |
+| SVM | 0.91 | 0.7317 | High sensitivity but more false alarms |
+| Logistic Regression | 0.89 | 0.8049 | Balanced approach |
+| Naive Bayes | 0.88 | 0.8171 | Conservative (fewer false positives, more false negatives) |
 
 ## Clinical Implications
 
@@ -282,10 +293,18 @@ jupyter notebook project/heart_disease.ipynb
 
 For medical screening applications, **sensitivity (recall)** is often prioritized over specificity, as missing a disease diagnosis has more severe consequences than false alarms. Based on this criterion:
 
-1. **Random Forest** (sensitivity = 0.94, MCC = 0.7264) → **Best choice for screening**
-2. **SVM** (sensitivity = 0.92) → Acceptable alternative with higher false positive rate
-3. **Logistic Regression** (sensitivity = 0.89) → Balanced option
-4. **Naive Bayes** (sensitivity = 0.88) → Good specificity but lower sensitivity
+1. **Random Forest** (sensitivity = 0.93, MCC = 0.7036) → **Best choice for screening**
+2. **SVM** (sensitivity = 0.91) → Good alternative with excellent ROC-AUC
+3. **Logistic Regression** (sensitivity = 0.89) → Balanced option with good specificity
+4. **Naive Bayes** (sensitivity = 0.88) → Conservative approach, minimizes false positives
+
+**Why Random Forest is recommended as the final model:**
+
+- **Highest Recall (0.93)** - identifies 93% of actual disease cases
+- **Highest MCC (0.7036)** - best overall correlation between predictions and reality
+- **Strong ROC-AUC (0.9094)** - excellent discriminative ability
+- **Competitive accuracy** - ties for best at 0.8516
+- **Robust to outliers and non-linear relationships** - ensemble nature handles complex medical data
 
 ### Risk Factor Confirmation
 
@@ -338,5 +357,7 @@ The feature importance analysis confirms established medical knowledge:
 - **GitHub**: [sofianatale](https://github.com/sofianatale)
 
 ---
+
+*For questions, collaborations, or feedback, please open an issue on GitHub or contact the author directly.*
 
 *For questions, collaborations, or feedback, please open an issue on GitHub or contact the author directly.*
