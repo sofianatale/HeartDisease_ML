@@ -247,7 +247,7 @@ jupyter notebook project/heart_disease.ipynb
 
 ## Results
 
-### Final Test Set Performance (5 Key Metrics)
+### Final Test Set Performance
 
 | Model | Accuracy | Recall | Macro F1 | MCC | ROC-AUC |
 |-------|----------|---------|----------|-----|---------|
