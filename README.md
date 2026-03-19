@@ -10,7 +10,7 @@
 ![ML](https://img.shields.io/badge/Machine-Learning-ff6f00?style=for-the-badge)
 ![Healthcare](https://img.shields.io/badge/Domain-Healthcare-00a1e0?style=for-the-badge)
 
-![heart](https://github.com/sofianatale/HeartDisease_ML/blob/main/figures/Coronary-heart-disease.jpg)
+![heart](https://github.com/sofianatale/HeartDisease_ML/blob/main/images/figures/Coronary-heart-disease.jpg)
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Dataset](#dataset)
