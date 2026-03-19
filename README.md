@@ -189,10 +189,10 @@ HeartDisease_ML/
 │   │   ├── heatmap_slope.png
 │   │   └── boxplot.png
 │   ├── evaluation/
-│   │   ├── gnb_evaluation.png
-│   │   ├── lr_evaluation.png
-│   │   ├── rf_evaluation.png
-│   │   └── svm_evaluation.png
+│   │   ├── naive_bayes.png
+│   │   ├── logistic_regression.png
+│   │   ├── random_forest.png
+│   │   └── svm.png
 │   └── feature_importance.png
 │
 ├── project/
