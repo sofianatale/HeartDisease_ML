@@ -176,7 +176,7 @@ HeartDisease_ML/
 │   ├── scaler.joblib                         # Fitted MinMaxScaler
 │   └── feature_names.txt                     # Selected features
 │
-├── plots/                                   # All visualizations from the notebook
+├── images/                                   # All visualizations from the notebook
 │   ├── EDA/
 │   │   ├── target_distribution.png
 │   │   ├── demographic_analysis.png
