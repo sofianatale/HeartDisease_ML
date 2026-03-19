@@ -168,10 +168,6 @@ HeartDisease_ML/
 │   ├── processed.va.data
 │   └── heart_disease_combined.csv           # Merged and cleaned dataset
 │
-├── figures/
-│   ├── Coronary-heart-disease.jpg
-│   └── visual_pipeline.png
-│
 ├── models/                                   # Trained models and artifacts
 │   ├── logistic_regression.joblib
 │   ├── naive_bayes.joblib
@@ -193,6 +189,9 @@ HeartDisease_ML/
 │   │   ├── logistic_regression.png
 │   │   ├── random_forest.png
 │   │   └── svm.png
+│   ├── figures/
+│   │   ├── Coronary-heart-disease.jpg
+│   │   └── visual_pipeline.png
 │   └── feature_importance.png
 │
 ├── project/
