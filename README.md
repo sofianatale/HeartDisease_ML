@@ -162,8 +162,6 @@ Given the medical context, special attention was paid to metrics that matter in 
 | 9 | `sex_male` | 0.051 | Demographic risk factor |
 | 10 | `cp_non-anginal pain` | 0.043 | Non-cardiac chest pain |
 
-![Feature Importance](images/feature_importance.png)
-
 ---
 
 ## Project Structure
