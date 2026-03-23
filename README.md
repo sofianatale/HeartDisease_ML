@@ -26,16 +26,7 @@
 
 Cardiovascular diseases represent the leading cause of death worldwide, accounting for approximately 19.8 million deaths annually according to the World Health Organization (WHO). Early identification of individuals at risk is essential for implementing preventive strategies and improving long-term patient outcomes.
 
-This project develops a complete machine learning pipeline for predicting the presence of cardiovascular disease using clinical patient data.
-
-- Data preprocessing with missing value imputation, outlier detection (Z-score method), and encoding of categorical variables
-- Comprehensive exploratory analysis of clinical features and their relationships
-- Feature engineering including MinMax scaling and Random Forest-based feature selection
-- Comparative evaluation of four classification algorithms (Logistic Regression, Gaussian Naive Bayes, SVM, Random Forest)
-- Performance assessment using metrics suited for medical applications
-- Fully reproducible workflow with saved models and preprocessing artifacts
-
-The pipeline provides a clear example of designing and evaluating classifiers for medical diagnostic support, with particular attention to the sensitivity-specificity trade-off critical in healthcare applications.
+This project develops a complete machine learning pipeline for predicting the presence of cardiovascular disease using clinical patient data. The pipeline provides a clear example of designing and evaluating classifiers for medical diagnostic support, with particular attention to the sensitivity-specificity trade-off critical in healthcare applications.
 
 ---
 
