@@ -1,0 +1,6 @@
+,Best Model,Score
+Accuracy,Logistic Regression,0.8516
+Recall,Random Forest,0.93
+Macro F1,Gaussian Naive Bayes,0.8496
+MCC,Random Forest,0.7036
+ROC-AUC,SVM,0.913
