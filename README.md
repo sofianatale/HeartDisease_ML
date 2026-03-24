@@ -264,22 +264,11 @@ jupyter notebook project/heart_disease.ipynb
 
 ## Model Comparison
 
-### Key Observations
-
 - **Random Forest** demonstrates the best balance for clinical applications, achieving the highest Recall (0.93) and MCC (0.7036), making it the most suitable model for minimizing false negatives
 - **SVM** shows the highest discriminative ability (ROC-AUC = 0.9130) and strong recall (0.91), but at the cost of lower MCC due to more false positives
 - **Gaussian Naive Bayes** achieves the best Macro F1 (0.8496), indicating excellent balance between precision and recall across both classes
 - **Logistic Regression** provides consistent performance across all metrics, making it a reliable baseline
 - All models demonstrate strong predictive capability with ROC-AUC scores exceeding 0.90
-
-### Sensitivity-Specificity Trade-off
-
-| Model | Recall (Sensitivity) | Specificity | Clinical Trade-off |
-|-------|---------------------|-------------|-------------------|
-| Random Forest | 0.93 | 0.7683 | Best for screening (minimizes missed diagnoses) |
-| SVM | 0.91 | 0.7317 | High sensitivity but more false alarms |
-| Logistic Regression | 0.89 | 0.8049 | Balanced approach |
-| Naive Bayes | 0.88 | 0.8171 | Conservative (fewer false positives, more false negatives) |
 
 ---
 
