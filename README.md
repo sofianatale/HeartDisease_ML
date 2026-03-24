@@ -26,7 +26,7 @@
 
 Cardiovascular diseases represent the leading cause of death worldwide, accounting for approximately 19.8 million deaths annually according to the World Health Organization (WHO). Early identification of individuals at risk is essential for implementing preventive strategies and improving long-term patient outcomes.
 
-This project develops a complete machine learning pipeline for predicting the presence of cardiovascular disease using clinical patient data. The pipeline provides a clear example of designing and evaluating classifiers for medical diagnostic support, with particular attention to the sensitivity-specificity trade-off critical in healthcare applications.
+This project develops a complete machine learning pipeline for predicting the presence of cardiovascular disease using clinical patient data. The pipeline provides a clear example of designing and evaluating classifiers for medical diagnostic support, with particular attention to healthcare applications.
 
 ---
 
@@ -245,10 +245,10 @@ jupyter notebook project/heart_disease.ipynb
 
 | Model | Accuracy | Recall | Macro F1 | MCC | ROC-AUC |
 |-------|----------|--------|----------|-----|---------|
-| **Random Forest** | 0.8516 | 0.9300 | 0.8470 | 0.7036 | 0.9094 |
-| Logistic Regression | 0.8516 | 0.8900 | 0.8490 | 0.7000 | 0.9110 |
-| Gaussian Naive Bayes | 0.8516 | 0.8800 | 0.8500 | 0.7000 | 0.9100 |
-| SVM | 0.8462 | 0.9100 | 0.8420 | 0.6902 | 0.9130 |
+| **Random Forest** | 0.8516 | 0.9300 | 0.8472 | 0.7036 | 0.9094 |
+| Logistic Regression | 0.8516 | 0.8900 | 0.8492 | 0.6998 | 0.9106 |
+| Gaussian Naive Bayes | 0.8516 | 0.8800 | 0.8496 | 0.6998 | 0.9104 |
+| SVM | 0.8462 | 0.9100 | 0.8424 | 0.6902 | 0.9130 |
 
 ### Best Model by Metric
 
@@ -256,7 +256,7 @@ jupyter notebook project/heart_disease.ipynb
 |--------|-----------|-------|
 | Accuracy | Logistic Regression / Random Forest / GNB | 0.8516 |
 | Recall (Sensitivity) | **Random Forest** | 0.9300 |
-| Macro F1 | Gaussian Naive Bayes | 0.8500 |
+| Macro F1 | Gaussian Naive Bayes | 0.8496 |
 | MCC | **Random Forest** | 0.7036 |
 | ROC-AUC | SVM | 0.9130 |
 
@@ -268,7 +268,7 @@ jupyter notebook project/heart_disease.ipynb
 
 - **Random Forest** demonstrates the best balance for clinical applications, achieving the highest Recall (0.93) and MCC (0.7036), making it the most suitable model for minimizing false negatives
 - **SVM** shows the highest discriminative ability (ROC-AUC = 0.9130) and strong recall (0.91), but at the cost of lower MCC due to more false positives
-- **Gaussian Naive Bayes** achieves the best Macro F1 (0.8500), indicating excellent balance between precision and recall across both classes
+- **Gaussian Naive Bayes** achieves the best Macro F1 (0.8496), indicating excellent balance between precision and recall across both classes
 - **Logistic Regression** provides consistent performance across all metrics, making it a reliable baseline
 - All models demonstrate strong predictive capability with ROC-AUC scores exceeding 0.90
 
